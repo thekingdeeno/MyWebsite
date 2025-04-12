@@ -1,0 +1,180 @@
+.home-page{
+    background-size: contain;
+    background-repeat: no-repeat;
+    .fullscreen-overlay{
+        background-image: linear-gradient(#000000,#000000b4,#000000);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        margin: none;
+        z-index: 1;
+    }
+    .navbar{
+        position: fixed;
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 0px;
+        text-align: center;
+        // background-color: black;
+        background-image: linear-gradient(#000000,#0000004a);
+        z-index: 2;
+        span{
+            padding: 10px;
+            margin: 10px;
+            font-size: 14px;
+            color: #de4444;
+            cursor: pointer;
+            background-color: #0000003e;
+            border-radius: 3px;
+            &:hover{
+                overflow: hidden;
+                padding-bottom: 10px;
+                position: relative;
+                transition: 400ms;
+                color: white;
+                font-weight: 500;
+            }
+        }
+        .active{
+            border-bottom: 2px solid #890506;
+        }
+
+    }
+    .intro-section{
+        background-image: url('../../public/images/Mario\ Live.gif');
+        height: 80vh;
+        padding: 100px 20px 100px 20px;
+        margin-bottom: 100px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .intro-text-container{
+            z-index: 1;
+            background-image: radial-gradient(#0000006a, rgba(0, 0, 0, 0));
+            border-radius: 50px;
+            padding: 30px;
+            h1{
+                font-size: 80px;
+            }
+            h2{
+                font-size: 30px;
+            }
+        }
+    }
+
+    .about-me{
+        z-index: -1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 100px 0px;
+        .image-container{
+            img{
+                // z-index: 1;
+                position: relative;
+                top: 10px;
+                transition: 400px;
+            }
+            .no-text{
+                transition: 1000ms;
+                bottom: 50px;
+                margin-left: 500px;
+            }
+            .text{
+                transition: 1000ms;
+                bottom: 10px;
+                margin-left: 0px;
+            }
+        }
+        .my-description{
+            margin-left: 30px;
+            h3{
+                padding: 20px;
+                border: 1px solid #890506;
+                border-radius: 10px;
+                width: max-content;
+                position: relative;
+                top: 30px;
+                left: 380px;
+                transition: 400ms;
+                &:hover{
+                    cursor: pointer;
+                    background-color: #890506;
+                    color: black;
+                }
+            }
+            p{
+                transition: 400ms;
+            }
+            .show{
+                transition: 1400ms;
+                border: 1px solid #890506;
+                border-radius: 20px;
+                padding: 30px;
+                margin: 20px;
+                width: 80%;
+                height: 200px;
+                max-height: fit-content;
+                overflow: hidden;
+            }
+            .hide{
+                background-color: #8905054b;
+                width: 1%;
+                height: 0;
+                transition: 1000ms;
+                color: transparent;
+                border: 0px;
+                border-radius: 20px;
+                padding: 0px;
+                margin: 0px;
+                overflow: hidden;
+            }
+        }
+    }
+    .tech-stack{
+        padding-bottom: 200px;
+        .heading{
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #890506;
+            width: 100%;
+            position: relative;
+            bottom: 100px;
+            padding: 50px 0px;
+            border-top: 5px solid black;
+        }
+        h1{
+            font-size: 30px;
+            width: max-content;
+            border-bottom: 1px solid #890506 ;
+        }
+    }
+    .professional-experience{
+        justify-content: center;
+        align-self: center;
+        
+        .heading{
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            font-size: 20px;
+            width: max-content;
+            border-bottom: 1px solid #890506 ;
+        }
+        .experience-cards{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 100px;
+        }
+    }
+}

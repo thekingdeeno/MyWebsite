@@ -1,103 +1,122 @@
-import Image from "next/image";
+'use client'
+import styles from './home.module.scss'
+import Image from 'next/image';
+import DeenoLogo from '../../public/images/deeno.png';
+import { useState } from 'react';
+import ScrollTriggered from '@/component/TextStack';
+import Drag from '@/component/MouseFollow';
+import experiences from "../work-experience"
+import ExperienceCard from '@/component/ExperienceCard';
+import { SparklesCore } from '@/component/Sparkles';
+
+type navType =  'intro'|'about'|'education'|'stack'|'experience'|'projects'| 'more';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [pageSection, setPageSection] = useState<navType>('intro');
+  const [showAboutText, setShowAboutText] = useState<boolean>(false)
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+  function navbarClick(nav: navType){
+    setPageSection(nav)
+  }
+
+  function navAvtive (nav: navType){
+    if (nav === pageSection) {
+      return 'active'
+    }
+    return ''
+  }
+
+  function companyLogoImage (id: number) {
+    switch (id) {
+      case 1:
+        return(
+          <>
+          <img src="" alt="" />
+          </>
+        )
+        break;
+    
+      default:
+        break;
+    }
+  }
+  
+  return (
+    <>
+      <div className="h-full w-full absolute inset-0 z-0" style={{position: "fixed"}}>
+        <SparklesCore
+          id="tsparticlesfullpage"
+          background="transparent"
+          minSize={0.6}
+          maxSize={1.4}
+          particleDensity={100}
+          className="w-full h-full"
+          particleColor="#FFFFFF"
+        />
+      </div>
+    <div className={styles['home-page']}>
+    <div className={styles['fullscreen-overlay']}>
     </div>
+      <div className={styles['navbar']}>
+          <span className={styles[navAvtive('intro')]} onClick={()=>navbarClick('intro')}>Intro</span>
+          <span className={styles[navAvtive('about')]} onClick={()=>navbarClick('about')}>About</span>
+          <span className={styles[navAvtive('education')]} onClick={()=>navbarClick('education')}>Education</span>
+          <span className={styles[navAvtive('stack')]} onClick={()=>navbarClick('stack')}>Stack</span>
+          <span className={styles[navAvtive('experience')]} onClick={()=>navbarClick('experience')}>Experience</span>
+          <span className={styles[navAvtive('projects')]} onClick={()=>navbarClick('projects')}>Projects</span>
+          <span className={styles[navAvtive('more')]} onClick={()=>navbarClick('more')}>More</span>
+      </div>
+    <Drag />
+      <div className={styles['intro-section']}>
+        <div className={styles['intro-text-container']}>
+          <h1>
+            Hey I'm Deeno
+          </h1>
+          <h2>
+            Full-Stack Software Developer
+          </h2>
+        </div>
+      </div>
+      <div className={styles['about-me']}>
+        <div className={`${styles['image-container']}`}>
+          <Image src={DeenoLogo} alt='' className={`${styles['no-text']} ${styles[showAboutText?'text':'']}`} />
+        </div>
+        <div className={styles['my-description']}>
+          <h3 onClick={()=>setShowAboutText(!showAboutText)}>About Me</h3>
+          <p className={`${styles['show']} ${styles[showAboutText?'':'hide']}`}>Hey I’m Deeno, a Full-Stack Software Developer with experience in building full-stack
+          applications using various JavaScript frameworks. I study Computer Science at Birmingham
+          City University. I worked majorly in the fintech industry working on microservices,
+          mobile apps and web dashboards. I am always looking forward to take new
+          challenges head on and continue growing as a software developer.</p>
+        </div>
+      </div>
+      <div className={styles['tech-stack']}> 
+        <ScrollTriggered />
+        <div className={styles['heading']}>
+          <h1>Teck Stack</h1>
+        </div>
+      </div>
+      <div className={styles['professional-experience']}>
+        <div className={styles['heading']}>
+          {/* <h1>Professional Experience</h1> */}
+        </div>
+        
+        <div className={styles['experience-cards']}>
+          {experiences.map((data)=>{
+            return (
+              <div key={data.id}>
+                <ExperienceCard data={data} />
+              </div>
+            )
+          })
+            
+          }
+        </div>
+      </div>
+      <div className={styles['project-gallery']}>
+
+      </div>
+    </div>
+    </>
   );
 }
