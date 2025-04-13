@@ -8,6 +8,7 @@ import Drag from '@/component/MouseFollow';
 import experiences from "../work-experience"
 import ExperienceCard from '@/component/ExperienceCard';
 import { SparklesCore } from '@/component/Sparkles';
+import { FloatingIcons } from '@/component/FloatingIcons';
 
 type navType =  'intro'|'about'|'education'|'stack'|'experience'|'projects'| 'more';
 
@@ -77,6 +78,7 @@ export default function Home() {
           </h2>
         </div>
       </div>
+        <FloatingIcons />
       <div className={styles['about-me']}>
         <div className={`${styles['image-container']}`}>
           <Image src={DeenoLogo} alt='' className={`${styles['no-text']} ${styles[showAboutText?'text':'']}`} />
@@ -101,7 +103,7 @@ export default function Home() {
           {/* <h1>Professional Experience</h1> */}
         </div>
         
-        <div className={styles['experience-cards']}>
+        {/* <div className={styles['experience-cards']}>
           {experiences.map((data)=>{
             return (
               <div key={data.id}>
@@ -111,7 +113,7 @@ export default function Home() {
           })
             
           }
-        </div>
+        </div> */}
       </div>
       <div className={styles['project-gallery']}>
 

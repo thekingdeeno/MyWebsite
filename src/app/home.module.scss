@@ -72,9 +72,9 @@
         justify-content: center;
         align-items: center;
         padding: 100px 0px;
+        
         .image-container{
             img{
-                // z-index: 1;
                 position: relative;
                 top: 10px;
                 transition: 400px;
@@ -120,6 +120,8 @@
                 height: 200px;
                 max-height: fit-content;
                 overflow: hidden;
+                background-color: black;
+                z-index: 1;
             }
             .hide{
                 background-color: #8905054b;
