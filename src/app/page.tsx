@@ -9,6 +9,8 @@ import experiences from "../work-experience"
 import ExperienceCard from '@/component/ExperienceCard';
 import { SparklesCore } from '@/component/Sparkles';
 import { FloatingIcons } from '@/component/FloatingIcons';
+import {SplitName, SplitRole} from '@/component/IntroText';
+import PersonalProjects from '@/component/PersonalProjects';
 
 type navType =  'intro'|'about'|'education'|'stack'|'experience'|'projects'| 'more';
 
@@ -70,12 +72,14 @@ export default function Home() {
     <Drag />
       <div className={styles['intro-section']}>
         <div className={styles['intro-text-container']}>
-          <h1>
+          <SplitName />
+          <SplitRole />
+          {/* <h1>
             Hey I'm Deeno
           </h1>
           <h2>
             Full-Stack Software Developer
-          </h2>
+          </h2> */}
         </div>
       </div>
         <FloatingIcons />
@@ -100,20 +104,36 @@ export default function Home() {
       </div>
       <div className={styles['professional-experience']}>
         <div className={styles['heading']}>
-          {/* <h1>Professional Experience</h1> */}
+          <h1>Professional Experience</h1>
         </div>
         
-        {/* <div className={styles['experience-cards']}>
+        <div className={styles['experience-cards']}>
           {experiences.map((data)=>{
             return (
               <div key={data.id}>
                 <ExperienceCard data={data} />
               </div>
             )
-          })
-            
-          }
-        </div> */}
+          })}
+        </div>
+      </div>
+      <div className={styles['personal-Projects']}>
+        <div className={styles['left-section']}>
+          <div className={styles['big-text']}>
+            <h1>PERSONAL</h1>
+            <h1>PrOjeCTs!</h1>
+          </div>
+          <div className={styles['small-text']}>
+            <p>
+              {"Over the last few years I have woked on many mini projects. I'm the kind of developer that enjoys hands on learning. Rather than watching tutorials, sometimes i just decide to work on a project that would require me to use the tool or tech stack I'm trying to learn. Since starting my coding career professionaly I have barely had anytime to work on new projects to show some new tricks and skills I have obtained. This is mostly due to the amount of tasks I usually have on my plate. Over time I have learnt more about time management and I usually try to set out time to work on new, bigger and more complex projects. Currently, the project I'm focusing on is the Wando Comm (version 2.0)"}
+            </p>
+          </div>
+        </div>
+        <div className={styles['left-section']}>
+          <div className={styles['projects-container']}>
+            <PersonalProjects />
+          </div>
+        </div>
       </div>
       <div className={styles['project-gallery']}>
 
