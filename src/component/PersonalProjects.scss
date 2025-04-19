@@ -1,0 +1,39 @@
+.personal-projects{
+    position: relative;
+    display: block;
+    // justify-content: center;
+    // align-items: center;
+    // width: 50%;
+    overflow: scroll;
+    .project{
+        padding: 30px;
+
+        .buttons{
+            display: flex;
+            justify-content: center;
+            align-items: center;       
+            button{
+                display: flex;
+                align-items: center;
+            }
+            .repo-link-btn{
+
+            }
+            .repo-link-btn{
+                
+            }
+            .repo-link-btn{
+                
+            }
+        }
+    }
+    .nav-buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        span{
+            padding: 5px;
+        }
+        
+    }
+}

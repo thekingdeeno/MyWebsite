@@ -129,7 +129,7 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className={styles['left-section']}>
+        <div className={styles['right-section']}>
           <div className={styles['projects-container']}>
             <PersonalProjects />
           </div>
