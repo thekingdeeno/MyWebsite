@@ -1,6 +1,7 @@
 import "./ExperienceCard.scss";
 import { useState } from "react";
-import experiences from "../work-experience";
+import { workExperience } from "@/constants/information";
+import SideSheet from "./SideSheet";
 import { IoCloseSharp } from "react-icons/io5";
 
 type Props = {
@@ -10,31 +11,33 @@ type Props = {
 const ExperienceCard = ({data}: Props)=>{
 
     const [activeModalId, setActiveModalId] = useState<any>(null);
+
     function closeModal(e: any){
         if (e.target.className === 'experience-detail-overlay') {
             setActiveModalId(null)
         }
         return
     }
+
     
+
     return(
         <>
         {activeModalId && 
             (
-            <div className="experience-detail-overlay" onClick={(e)=>closeModal(e)}>
-                <div className="experience-detail-body">
-                    {/* <button className="close-button">
-                        <IoCloseSharp className="icon" />
-                    </button> */}
-                    <div className="data-container">
-                        <div className="container-heading">
-                            <img src={data.logoImageUrl} alt="logo-img" />
-                        </div>
-                        <h2>{data.name}</h2>
-                        <p>{experiences[activeModalId - 1].description}</p>
-                    </div>
+                <div className="experience-detail-overlay">
+                    <SideSheet active={activeModalId} onClose={()=>{setActiveModalId(null)}} >
+                            <div className="experience-detail-body">
+                                <div className="data-container">
+                                    <div className="container-heading">
+                                        <img src={data.logoImageUrl} alt="logo-img" />
+                                    </div>
+                                    <h2>{data.name}</h2>
+                                    <p>{workExperience[activeModalId - 1].description}</p>
+                                </div>
+                            </div>
+                    </SideSheet>
                 </div>
-            </div>
             )
         }
         <div className="experience-card" onClick={()=> setActiveModalId(data.id)}>

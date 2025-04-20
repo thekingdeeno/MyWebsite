@@ -1,38 +1,84 @@
-.personal-projects{
+.projects{
     position: relative;
-    display: block;
-    // justify-content: center;
-    // align-items: center;
-    // width: 50%;
+    // display: block;
     overflow: scroll;
+    min-height: 100%;
     .project{
-        padding: 30px;
-
+        position: relative;
+        background-color: #88050750;
+        min-height: 100%;
+        margin: 0px 100px;
+        padding-bottom: 20px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        overflow: hidden;
+        .project-image{
+            img{
+                // border-top-left-radius: 10px;
+                // border-top-right-radius: 10px;
+            }
+        }
+        .description{
+            padding: 40px 40px 20px 40px;
+        }
         .buttons{
+            position: relative;
+            bottom: 0px;
             display: flex;
             justify-content: center;
-            align-items: center;       
+            align-items: center;     
             button{
                 display: flex;
                 align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+                border-radius: 8px;
+                padding: 10px;
+                margin: 10px;
+                .btn-ico{
+                    padding-left: 5px;
+                    font-size: 25px;
+                }
+            }
+            .live-link-btn{
+                background-color: white;
+                color: black;
             }
             .repo-link-btn{
-
+                border: 1px solid rgba(255, 255, 255, 0.293);
+                background-color: black;
             }
-            .repo-link-btn{
-                
-            }
-            .repo-link-btn{
-                
+            .inactive-link-btn{
+                border: 1px solid rgba(255, 255, 255, 0.406);
+                background-color: rgba(128, 128, 128, 0.439);
+                color: white;
+                cursor: not-allowed;
             }
         }
     }
     .nav-buttons{
         display: flex;
         justify-content: center;
-        align-items: center;
-        span{
-            padding: 5px;
+        align-items: center; 
+        .buttons-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            margin: auto;
+            bottom: 0px;
+            span{
+                transition: 500ms;
+                color: white;
+                padding: 5px;
+                :hover{
+                    transition: 500ms;
+                    font-size: 18px;
+                    padding: 0px;
+                    color: red;
+                }
+            }
+
         }
         
     }

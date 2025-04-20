@@ -5,7 +5,7 @@ import DeenoLogo from '../../public/images/deeno.png';
 import { useState } from 'react';
 import ScrollTriggered from '@/component/TextStack';
 import Drag from '@/component/MouseFollow';
-import experiences from "../work-experience"
+import { workExperience } from '@/constants/information';
 import ExperienceCard from '@/component/ExperienceCard';
 import { SparklesCore } from '@/component/Sparkles';
 import { FloatingIcons } from '@/component/FloatingIcons';
@@ -60,7 +60,7 @@ export default function Home() {
     <div className={styles['home-page']}>
     <div className={styles['fullscreen-overlay']}>
     </div>
-      <div className={styles['navbar']}>
+      {/* <div className={styles['navbar']}>
           <span className={styles[navAvtive('intro')]} onClick={()=>navbarClick('intro')}>Intro</span>
           <span className={styles[navAvtive('about')]} onClick={()=>navbarClick('about')}>About</span>
           <span className={styles[navAvtive('education')]} onClick={()=>navbarClick('education')}>Education</span>
@@ -68,8 +68,8 @@ export default function Home() {
           <span className={styles[navAvtive('experience')]} onClick={()=>navbarClick('experience')}>Experience</span>
           <span className={styles[navAvtive('projects')]} onClick={()=>navbarClick('projects')}>Projects</span>
           <span className={styles[navAvtive('more')]} onClick={()=>navbarClick('more')}>More</span>
-      </div>
-    <Drag />
+      </div> */}
+    {/* <Drag /> */}
       <div className={styles['intro-section']}>
         <div className={styles['intro-text-container']}>
           <SplitName />
@@ -108,7 +108,7 @@ export default function Home() {
         </div>
         
         <div className={styles['experience-cards']}>
-          {experiences.map((data)=>{
+          {workExperience.map((data)=>{
             return (
               <div key={data.id}>
                 <ExperienceCard data={data} />
@@ -117,7 +117,7 @@ export default function Home() {
           })}
         </div>
       </div>
-      <div className={styles['personal-Projects']}>
+      <div className={styles['personal-projects']}>
         <div className={styles['left-section']}>
           <div className={styles['big-text']}>
             <h1>PERSONAL</h1>
