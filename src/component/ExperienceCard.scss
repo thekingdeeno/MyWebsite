@@ -1,14 +1,22 @@
 .experience-card{
     transition: 500ms;
     position: relative;
-    // padding: 20px;
     margin: 10px;
     border-radius: 20px;
     text-align: left;
-    width: 470px;
+    width: 400px;
     height: 100%;
     background-color: #88050750;
     cursor: pointer;
+    @media screen and (max-width: 1600px) {
+        width: 300px;
+        margin: 0px 10px;
+        padding-bottom: 20px;
+    }
+    @media screen and (max-width: 1300px) {
+        width: 250px;
+        margin: 10px;
+    }
     .logo-container{
         display: block;
         justify-content: center;
@@ -45,6 +53,14 @@
         h3{
             font-size: 25px;
             font-weight: 700;
+        }
+        @media screen and (max-width: 1600px) {
+            h4{
+                font-size: 18px;
+            }
+            h3{
+                font-size: 15px;
+            }
         }
     }
 }

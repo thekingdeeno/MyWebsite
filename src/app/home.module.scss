@@ -45,7 +45,11 @@
     }
     .intro-section{
         background-image: url('../../public/images/Mario\ Live.gif');
-        height: 80vh;
+        background-size: cover;
+        background-position: center;
+        // background-repeat: no-repeat;
+
+        height: 100vh;
         // padding: 100px 20px 100px 20px;
         margin-bottom: 100px;
         text-align: center;
@@ -66,6 +70,11 @@
         }
     }
 
+    .floating-icons{
+        position: relative;
+        bottom: 150px;
+    }
+
     .about-me{
         z-index: -1;
         display: flex;
@@ -82,7 +91,7 @@
             .no-text{
                 transition: 1000ms;
                 bottom: 50px;
-                margin-left: 500px;
+                // margin-left: 500px;
             }
             .text{
                 transition: 1000ms;
@@ -99,7 +108,7 @@
                 width: max-content;
                 position: relative;
                 top: 30px;
-                left: 380px;
+                // left: 380px;
                 transition: 400ms;
                 &:hover{
                     cursor: pointer;
@@ -111,6 +120,7 @@
                 transition: 400ms;
             }
             .show{
+                position: relative; 
                 transition: 1400ms;
                 border: 1px solid #890506;
                 border-radius: 20px;
@@ -119,8 +129,8 @@
                 width: 80%;
                 height: 200px;
                 max-height: fit-content;
-                overflow: hidden;
-                background-color: black;
+                overflow: scroll;
+                background-color: rgba(0, 0, 0, 0.709);
                 z-index: 1;
             }
             .hide{
@@ -177,6 +187,14 @@
             display: flex;
             justify-content: space-evenly;
             margin-top: 100px;
+            overflow: scroll;
+            @media screen and (max-width: 700px) {
+                display: block;
+            }
+            .experience-card-container{
+                // width: 20%;
+                padding: 10px 0px;
+            }
         }
     }
 
@@ -194,7 +212,7 @@
                 h1{
                     font-size: 100px;
                     font-weight: 900;
-                    :last-child{
+                    &:last-child{
                         color: #890506;
                     }
                 }
@@ -204,5 +222,21 @@
             width: 50%;
             display: flex;
         }
-    }
-}
+        @media screen and (max-width: 1024px) {
+            display: block;
+            .left-section{
+                width: 100%;
+                margin-bottom: 100px;
+                .big-text{
+                    h1{
+                        font-size: 50px;
+                    };
+                };
+            };
+            .right-section{
+                width: 100%;
+                // display: flex;
+            };
+        };
+    };
+};

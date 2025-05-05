@@ -46,7 +46,7 @@ export default function Home() {
   
   return (
     <>
-      <div className="h-full w-full absolute inset-0 z-0" style={{position: "fixed"}}>
+      <div className="" style={{position: "fixed"}}>
         <SparklesCore
           id="tsparticlesfullpage"
           background="transparent"
@@ -58,8 +58,6 @@ export default function Home() {
         />
       </div>
     <div className={styles['home-page']}>
-    <div className={styles['fullscreen-overlay']}>
-    </div>
       {/* <div className={styles['navbar']}>
           <span className={styles[navAvtive('intro')]} onClick={()=>navbarClick('intro')}>Intro</span>
           <span className={styles[navAvtive('about')]} onClick={()=>navbarClick('about')}>About</span>
@@ -69,20 +67,16 @@ export default function Home() {
           <span className={styles[navAvtive('projects')]} onClick={()=>navbarClick('projects')}>Projects</span>
           <span className={styles[navAvtive('more')]} onClick={()=>navbarClick('more')}>More</span>
       </div> */}
-    {/* <Drag /> */}
       <div className={styles['intro-section']}>
+        <div className={styles['fullscreen-overlay']}></div>
         <div className={styles['intro-text-container']}>
           <SplitName />
           <SplitRole />
-          {/* <h1>
-            Hey I'm Deeno
-          </h1>
-          <h2>
-            Full-Stack Software Developer
-          </h2> */}
         </div>
       </div>
+      <div className={styles['floating-icons']}>
         <FloatingIcons />
+      </div>
       <div className={styles['about-me']}>
         <div className={`${styles['image-container']}`}>
           <Image src={DeenoLogo} alt='' className={`${styles['no-text']} ${styles[showAboutText?'text':'']}`} />
@@ -110,7 +104,7 @@ export default function Home() {
         <div className={styles['experience-cards']}>
           {workExperience.map((data)=>{
             return (
-              <div key={data.id}>
+              <div key={data.id} className={styles['experience-card-container']}>
                 <ExperienceCard data={data} />
               </div>
             )

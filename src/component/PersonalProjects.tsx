@@ -7,36 +7,44 @@ import { GoDot } from "react-icons/go";
 import { GrCaretPrevious } from "react-icons/gr";
 import { GrCaretNext } from "react-icons/gr";
 import { personalProjects } from "@/constants/information";
-
+import Image from "next/image";
 import "./PersonalProjects.scss"
+import "../../public/images/LCBanner.jpeg"
+import Link from "next/link";
 
 
 const PersonalProjects = ()=>{
 
     const [activeProjectId, setActiveProjectId] = useState<number>(1);
+    const [readMoreModal, setReadMoreModal] = useState<number|null>(null);
 
     const proj = personalProjects[activeProjectId -1 ];
 
     // setInterval(()=>{
         // nextProject()
     // },5000)
+
+    function closeModal(e: any){
+        if (e.target.className === 'read-more-modal') {
+            setReadMoreModal(null);
+        };
+    };
     
     function prevProject(){
         if (activeProjectId -1 < 1) {
             setActiveProjectId(personalProjects.length);
             return
-        }
-        setActiveProjectId(activeProjectId - 1)
-        
-    }
+        };
+        setActiveProjectId(activeProjectId - 1);
+    };
 
     function nextProject(){
         if (activeProjectId +1 > personalProjects.length) {
             setActiveProjectId(1);
             return
-        }
+        };
         setActiveProjectId(activeProjectId + 1);
-    }
+    };
     
 
 
@@ -44,18 +52,55 @@ const PersonalProjects = ()=>{
 
     return(
         <>
-            <div className="projects">
-                <div className="project" key={proj.id}>
-                    <div className="project-image">
-                        <img src={"https://raw.githubusercontent.com/thekingdeeno/MyWebsite/156a6c2d73bbe9e4e5832b291aac192defea220e/public/images/EbidhaaBannerImage.png"} alt="" />
-                    </div>
+        {readMoreModal !== null &&
+            <div className="read-more-modal" onClick={(e)=>closeModal(e)}>
+                <div className="content-body">
+                    <h1 className="header">{proj.name}</h1>
                     <div className="description">
-                        <p>{proj.description}</p>
+                        <p>
+                            {proj.description}
+
+                        </p>
                     </div>
                     <div className="buttons">
+                        <Link href={proj.repoUrl} target="blank">
+                        
                         <button className="repo-link-btn">Code <FaCode className="btn-ico" /></button>
+                        </Link>
                         {proj.link !== null ?
-                        <button className="live-link-btn">Link <HiExternalLink className="btn-ico" /></button>:
+                        <Link href={proj.link} target="blank">
+                        
+                        <button className="live-link-btn">Link <HiExternalLink className="btn-ico" /></button>
+                        </Link>:
+                        <button className="inactive-link-btn">Suspended<MdSignalWifiConnectedNoInternet0 className="btn-ico" /></button>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+            <div className="projects">
+                <div className="project" key={proj.id} onClick={()=>setReadMoreModal(proj.id)}>
+                    <div className="project-image">
+                        <Image src={require(`../../public/images/${proj.imageFileName}`)} alt={""} width={200} height={100}/>
+
+                    </div>
+                    <div className="description">
+                        <p>
+                            {proj.description.slice(0,200)}
+                            {proj.description.length > 200 && '...  '}
+                        </p>
+                            {proj.description.length > 200 &&(<p className="read-more" onClick={()=>setReadMoreModal(proj.id)}>Read More</p>)}
+                    </div>
+                    <div className="buttons">
+                        <Link href={proj.repoUrl} target="blank">
+                        
+                        <button className="repo-link-btn">Code <FaCode className="btn-ico" /></button>
+                        </Link>
+                        {proj.link !== null ?
+                        <Link href={proj.link} target="blank">
+                        
+                        <button className="live-link-btn">Link <HiExternalLink className="btn-ico" /></button>
+                        </Link>:
                         <button className="inactive-link-btn">Suspended<MdSignalWifiConnectedNoInternet0 className="btn-ico" /></button>
                         }
                     </div>

@@ -17,8 +17,8 @@ import YouTubeIcon from "../../public/images/youtube-logo.webp"
 import KickIcon from "../../public/images/kick-logo.jpg"
 import DiscordIcon from "../../public/images/discord.svg"
 
-export function FloatingIcons({ count = 5 }) {
-  const [dimensions, setDimensions] = useState({ width: 1200, height: 800 })
+export function FloatingIcons() {
+  const [dimensions, setDimensions] = useState({ width: 30, height: 300 })
 
   useEffect(() => {
     setDimensions({
@@ -129,7 +129,7 @@ export function FloatingIcons({ count = 5 }) {
         >
           <div className="relative w-16 h-20 bg-white/5 backdrop-blur-sm rounded-lg border border-white/10 flex items-center justify-center transform hover:scale-110 transition-transform">
           <Link href={val.url} target='blank'>
-            <Image src={val.icon} alt={val.name} height={100} width={100}/>
+            <Image src={val.icon} alt={val.name} height={50} width={50}/>
           </Link>
           </div>
         </motion.div>

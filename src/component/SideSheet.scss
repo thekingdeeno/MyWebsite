@@ -10,18 +10,17 @@
         overflow: auto;
         background-color: #88050750;
         width: 35%;
-
+        height: 100%;
+        float: right;
+        padding: 20px 40px;
+        position: absolute;
+        right: -800px;
         @media screen and (max-width: 1000px) {
             width: 100%;
         }
         @media screen and (min-width: 1001px) and (max-width: 1024px) {
             width: 50%;
         }
-        height: 100%;
-        float: right;
-        padding: 20px 40px;
-        position: absolute;
-        // right: -800px;
             .head{
                 .close-button{
                     font-size: 30px;
@@ -31,13 +30,13 @@
                         color: #932c2e;
                     }
                 }
-                p{      
+                p{
+                    font-size: 30px;
+                    font-weight: 900;
+                    // padding: 30px 0px 30px 10px;
                     @media screen and (max-width: 1280px) {
                         font-size: 20px;
                     }
-                    font-size: 30px;
-                    font-weight: 900;
-                    padding: 30px 0px 30px 10px;
                 }
             }
             #body{

@@ -2,7 +2,7 @@ import "./ExperienceCard.scss";
 import { useState } from "react";
 import { workExperience } from "@/constants/information";
 import SideSheet from "./SideSheet";
-import { IoCloseSharp } from "react-icons/io5";
+import Image from "next/image";
 
 type Props = {
     data: any
@@ -43,7 +43,7 @@ const ExperienceCard = ({data}: Props)=>{
         <div className="experience-card" onClick={()=> setActiveModalId(data.id)}>
             <div className="logo-container">
                 <div className="banner-image" >
-                    <img src={data.bannerImageUrl} alt="banner image" />
+                    <Image src={require(`../../public/images/${data.imageFileName}`)} alt={""} width={200} height={200}/>
                 </div>
                 <div className="logo-image">
                     <img src={data.logoImageUrl} alt="logo image" />
@@ -58,5 +58,6 @@ const ExperienceCard = ({data}: Props)=>{
         </>
     )
 }
+
 
 export default ExperienceCard;
