@@ -4,7 +4,6 @@ import Image from 'next/image';
 import DeenoLogo from '../../public/images/deeno.png';
 import { useState } from 'react';
 import ScrollTriggered from '@/component/TextStack';
-import Drag from '@/component/MouseFollow';
 import { workExperience } from '@/constants/information';
 import ExperienceCard from '@/component/ExperienceCard';
 import { SparklesCore } from '@/component/Sparkles';

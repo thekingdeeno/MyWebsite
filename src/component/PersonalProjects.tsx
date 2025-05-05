@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { FaCode } from "react-icons/fa6";
 import { HiExternalLink } from "react-icons/hi";
 import { MdSignalWifiConnectedNoInternet0 } from "react-icons/md";

@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
-import { FileText } from "lucide-react"
 import Link from 'next/link';
 import LinkedInIcon from "../../public/images/LinkedIn_logo.png"
 import GithubIcon from "../../public/images/github-logo.webp"
