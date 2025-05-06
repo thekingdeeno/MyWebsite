@@ -12,8 +12,8 @@ export type SidesheetProps = {
 };
 
 const SideSheet = ({ header, children, active, onClose, cancelBtn, hideCloseButton }: SidesheetProps) => {
-  const closeSideSheet = (e: any) => {
-    if (e.target.className === 'side-sheet') {
+  const closeSideSheet = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    if (e.target instanceof HTMLElement && e.target.className === 'side-sheet') {
       setTransition(false);
       setTimeout(() => onClose(), 300);
     }

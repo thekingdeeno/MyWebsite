@@ -11,6 +11,7 @@ import Image from "next/image";
 import "./PersonalProjects.scss"
 import "../../public/images/LCBanner.jpeg"
 import Link from "next/link";
+import { PersonalProjectType } from "@/types";
 
 
 const PersonalProjects = ()=>{
@@ -24,8 +25,8 @@ const PersonalProjects = ()=>{
         // nextProject()
     // },5000)
 
-    function closeModal(e: any){
-        if (e.target.className === 'read-more-modal') {
+    function closeModal(e: React.MouseEvent<HTMLDivElement, MouseEvent>){
+        if (e.target instanceof HTMLElement && e.target.className === 'read-more-modal') {
             setReadMoreModal(null);
         };
     };
@@ -81,7 +82,7 @@ const PersonalProjects = ()=>{
             <div className="projects">
                 <div className="project" key={proj.id} onClick={()=>setReadMoreModal(proj.id)}>
                     <div className="project-image">
-                        <Image src={require(`../../public/images/${proj.imageFileName}`)} alt={""} width={200} height={100}/>
+                        <Image src={`/images/${proj.imageFileName}`} alt={""} width={200} height={100}/>
 
                     </div>
                     <div className="description">
@@ -111,7 +112,7 @@ const PersonalProjects = ()=>{
                             <GrCaretPrevious />
                         </span>
 
-                        {personalProjects.map((val: any, index)=>{
+                        {personalProjects.map((val: PersonalProjectType)=>{
                             return(
                                 <span key={val.id} onClick={()=>setActiveProjectId(val.id)}>
                                     {(val.id === activeProjectId) ?

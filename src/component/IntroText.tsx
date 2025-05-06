@@ -35,7 +35,7 @@ export function SplitName() {
     return (
         <div className="container" ref={containerRef}>
             <h1 className="h1">
-               Hey, I'm Deeno
+               {"Hey, I'm Deeno"}
             </h1>
             <Stylesheet />
         </div>

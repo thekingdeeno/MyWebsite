@@ -10,38 +10,39 @@ import { SparklesCore } from '@/component/Sparkles';
 import { FloatingIcons } from '@/component/FloatingIcons';
 import {SplitName, SplitRole} from '@/component/IntroText';
 import PersonalProjects from '@/component/PersonalProjects';
+import { WorkExperienceType } from '@/types';
 
-type navType =  'intro'|'about'|'education'|'stack'|'experience'|'projects'| 'more';
+// type navType =  'intro'|'about'|'education'|'stack'|'experience'|'projects'| 'more';
 
 export default function Home() {
-  const [pageSection, setPageSection] = useState<navType>('intro');
+  // const [pageSection, setPageSection] = useState<navType>('intro');
   const [showAboutText, setShowAboutText] = useState<boolean>(false)
 
-  function navbarClick(nav: navType){
-    setPageSection(nav)
-  }
+  // function navbarClick(nav: navType){
+  //   setPageSection(nav)
+  // }
 
-  function navAvtive (nav: navType){
-    if (nav === pageSection) {
-      return 'active'
-    }
-    return ''
-  }
+  // function navAvtive (nav: navType){
+  //   if (nav === pageSection) {
+  //     return 'active'
+  //   }
+  //   return ''
+  // }
 
-  function companyLogoImage (id: number) {
-    switch (id) {
-      case 1:
-        return(
-          <>
-          <img src="" alt="" />
-          </>
-        )
-        break;
+  // function companyLogoImage (id: number) {
+  //   switch (id) {
+  //     case 1:
+  //       return(
+  //         <>
+  //         <img src="" alt="" />
+  //         </>
+  //       )
+  //       break;
     
-      default:
-        break;
-    }
-  }
+  //     default:
+  //       break;
+  //   }
+  // }
   
   return (
     <>
@@ -101,7 +102,7 @@ export default function Home() {
         </div>
         
         <div className={styles['experience-cards']}>
-          {workExperience.map((data)=>{
+          {workExperience.map((data: WorkExperienceType)=>{
             return (
               <div key={data.id} className={styles['experience-card-container']}>
                 <ExperienceCard data={data} />
