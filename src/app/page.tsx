@@ -93,7 +93,7 @@ export default function Home() {
       <div className={styles['tech-stack']}> 
         <ScrollTriggered />
         <div className={styles['heading']}>
-          <h1>Teck Stack</h1>
+          <h1>Tech Stack</h1>
         </div>
       </div>
       <div className={styles['professional-experience']}>
