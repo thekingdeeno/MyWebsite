@@ -27,7 +27,7 @@ export const workExperience = [
         logoImageUrl: "https://media.licdn.com/dms/image/v2/D4D0BAQHBTjxOnpFahg/company-logo_200_200/B4DZUUP8.LHIAI-/0/1739801481559/live_capital_hq_logo?e=1750291200&v=beta&t=MeNzrw-Y0_Ee9W5VCeupOgGinm_k-u9R470LhxxbS9I",
         imageFileName: "LCBanner.jpeg",
         role: "Backend Engineer",
-        description: "I collaborated in the development of microservices in TypeScript to automate operations and manage high-volume API calls, improving error tracking by 25%. I also developed web dashboards using React.js, Next.js, TypeScript, and SASS to manage customer transactions and savings plans, increasing customer support efficiency by 15%. Additionally, I worked closely with Senior Engineers, Data Scientists, and Product Designers to optimize code, enhance UI/UX, document system integrations, create ERDs, and contribute to architectural planning.",
+        description: "I developed and structured backend services for mobile applications based on Figma designs, PRDs, and TRDs, using technologies like Node.js, MySQL, Restana, and GCP. I integrated third-party payment APIs to enable in-app financial transactions and purchases, while also onboarding and collaborating with new engineers to improve development speed, workflow, and overall team efficiency.",
         projects: [
 
         ]
