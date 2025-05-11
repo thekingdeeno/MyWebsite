@@ -5,7 +5,11 @@ export const workExperience = [
         logoImageUrl: "https://media.licdn.com/dms/image/v2/C4D0BAQHtdsIatNl3Lg/company-logo_200_200/company-logo_200_200/0/1630578374027/codeyourfuture_logo?e=1750291200&v=beta&t=ek17zQFYncRgRV2lkFzNSxGaXLwmCYRGEVB8wJthOlo",
         imageFileName: "codeyourfuture_cover.jpeg",
         role: "Software Dev Volunteer / Training Assistant",
-        description: "I actively support individuals from different communities and professional fields in their journey to become skilled software developers by offering mentorship and assisting with coding challenges. I help participants develop career skills, build portfolios, and prepare for job interviews while providing guidance on navigating the tech industry.",
+        description: "As a volunteer Coding Instructor, I support underrepresented individuals entering the tech industry through mentorship, code reviews, and peer programming sessions. I assist learners with coding challenges, career development advice, portfolio building, and job interview preparation, helping to foster a more diverse and inclusive tech community.",
+        points: [
+            'Conduct code reviews and lead peer programming sessions for junior developers.',
+            'Mentor learners from underrepresented backgrounds, providing guidance on coding challenges, portfolio building, and job interview preparation.',
+            'Support career development initiatives, promoting diversity and inclusion within the tech community.'],
         projects: [
             
         ]
@@ -16,7 +20,13 @@ export const workExperience = [
         logoImageUrl: "https://media.licdn.com/dms/image/v2/C4D0BAQGxM9phphZxfg/company-logo_200_200/company-logo_200_200/0/1630482013181/piggyvest_logo?e=1750291200&v=beta&t=CG1Su52hgDB6hDv3vYElaSinP9WY7r12Zpo3_eGkpo8",
         imageFileName: "pv_banner.jpeg",
         role: "Full-Stack Software Engineer",
-        description: "I collaborated in the development of microservices in TypeScript to automate operations and manage high-volume API calls, improving error tracking by 25%. I also developed web dashboards using React.js, Next.js, TypeScript, and SASS to manage customer transactions and savings plans, increasing customer support efficiency by 15%. Additionally, I worked closely with Senior Engineers, Data Scientists, and Product Designers to optimize code, enhance UI/UX, document system integrations, create ERDs, and contribute to architectural planning.",
+        description: "As a Fullstack Software Engineer at PiggyTech, I worked on the development of microservices in TypeScript, optimising systems for high-volume API calls and improving error tracking processes by 25%. I built responsive web dashboards for transaction management and customer savings plans using React.js, Next.js, and Sass, contributing to a 15% boost in customer support efficiency. Collaborating closely with senior engineers, data scientists, and product designers, I enhanced system performance, refined UI/UX flows, and contributed to architectural planning through documentation and ERDs.",
+        points: [
+            'Developed TypeScript microservices for operational automation and high-volume API handling, improving error tracking efficiency by 25%',
+            'Built dynamic React.js and Next.js dashboards for transaction management and customer savings plans, increasing customer support efficiency by 15%.',
+            'Collaborated with senior software engineers, data scientists, and product designers to enhance system architecture and UI/UX flow',
+            'Contributed to backend integration with legacy systems and created documentation including ERDs and system integrations',
+        ],
         projects: [
 
         ]
@@ -27,7 +37,12 @@ export const workExperience = [
         logoImageUrl: "https://media.licdn.com/dms/image/v2/D4D0BAQHBTjxOnpFahg/company-logo_200_200/B4DZUUP8.LHIAI-/0/1739801481559/live_capital_hq_logo?e=1750291200&v=beta&t=MeNzrw-Y0_Ee9W5VCeupOgGinm_k-u9R470LhxxbS9I",
         imageFileName: "LCBanner.jpeg",
         role: "Backend Engineer",
-        description: "I developed and structured backend services for mobile applications based on Figma designs, PRDs, and TRDs, using technologies like Node.js, MySQL, Restana, and GCP. I integrated third-party payment APIs to enable in-app financial transactions and purchases, while also onboarding and collaborating with new engineers to improve development speed, workflow, and overall team efficiency.",
+        description: "At Live Capital, I develop and maintain scalable backend services for mobile applications, translating product designs and technical requirement documents into efficient backend systems. I integrate third-party payment APIs to enable secure financial transactions within the app, while contributing to system architecture and cloud deployments using Node.js, MySQL, Restana, and Google Cloud Platform. Additionally, I collaborate with cross-functional teams and help onboard new engineers to enhance development speed and team productivity.",
+        points: [
+        'Develop and maintain scalable backend services for mobile applications using Node.js, MySQL, Restana, and Google Cloud Platform (GCP)',
+        'Integrate third-party payment APIs to enable secure in-app financial transactions',
+        'Translate Figma designs, PRDs, and technical documents into efficient, production-ready backend systems',
+        'Support team growth by onboarding new engineers and collaborating in cross-functional agile teams.'],
         projects: [
 
         ]
@@ -40,7 +55,12 @@ export const workExperience = [
         width: 400,
         height: 50,
         role: "Backend Engineering Intern",
-        description: "During my time working under a Senior Engineer, they contributed to backend development by creating and maintaining APIs for CRUD operations using Node.js and Fastify. They also participated in UI/UX testing, identifying and resolving mobile bugs on iOS and Android devices, and providing feedback for improvements. Furthermore, they collaborated within cross-functional teams to deliver software solutions and enhance app user experience and performance based on client requirements.",
+        description: "As a Backend Engineer Intern at Ebidhaa, I supported a senior engineer in building and maintaining APIs for CRUD operations using Node.js and Fastify. I participated in cross-functional development processes, contributed to UI/UX testing, identified and resolved bugs on both iOS and Android platforms, and provided constructive feedback for improving app performance and user experience based on client requirements.",
+        points: [
+            'Maintained and extended backend APIs for CRUD operations using Node.js and Fastify under the guidance of a senior engineer',
+            'Participated in UI/UX testing, identified and resolved mobile app bugs on iOS and Android devices',
+            'Delivered app performance improvements and UX recommendations based on client requirements in a cross-functional team',
+        ],
         projects: [
             
         ]

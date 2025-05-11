@@ -5,7 +5,7 @@ export type WorkExperienceType = {
         imageFileName: string,
         role: string,
         description: string,
-        // projects: []
+        points: string[]
     }
 
     export type PersonalProjectType = {

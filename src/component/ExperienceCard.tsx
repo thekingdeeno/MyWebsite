@@ -36,6 +36,18 @@ const ExperienceCard = ({data}: Props)=>{
                                     </div>
                                     <h2>{data.name}</h2>
                                     <p>{workExperience[activeModalId - 1].description}</p>
+                                    <br />
+                                    <br />
+                                    <h2 className="role-heading">Roles</h2>
+                                    <div className="role-points">
+                                        <ul>
+                                            {data.points.map((point) => {
+                                                return(
+                                                    <li> -- {point}</li>
+                                                );
+                                            })}
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                     </SideSheet>

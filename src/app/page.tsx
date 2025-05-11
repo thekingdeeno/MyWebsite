@@ -83,11 +83,19 @@ export default function Home() {
         </div>
         <div className={styles['my-description']}>
           <h3 onClick={()=>setShowAboutText(!showAboutText)}>About Me</h3>
-          <p className={`${styles['show']} ${styles[showAboutText?'':'hide']}`}>Hey I’m Deeno, a Full-Stack Software Developer with experience in building full-stack
-          applications using various JavaScript frameworks. I study Computer Science at Birmingham
-          City University. I worked majorly in the fintech industry working on microservices,
-          mobile apps and web dashboards. I am always looking forward to take new
-          challenges head on and continue growing as a software developer.</p>
+          <p className={`${styles['show']} ${styles[showAboutText?'':'hide']}`}>
+            <p>
+              Hey I’m Deeno, a versatile Software Engineer with a strong foundation in backend and fullstack development, specialising in building scalable, high-performance applications and cloud-based services. With hands-on experience using tools like Node.js, TypeScript, React, Next.js, and Google Cloud Platform, I thrive on creating seamless user experiences and efficient, robust systems.
+            </p>
+            <br />
+            <p>
+              Currently, I’m part of the engineering team at Live Capital, where I develop and maintain backend services for mobile applications, integrating third-party APIs and contributing to system architecture. Previously, I played a key role as a Fullstack Software Engineer at PiggyTech Global, developing microservices, building intuitive dashboards, and enhancing system performance and UI/UX flow quality.
+            </p>
+            <br />
+            <p>
+              Beyond technical work, I’m passionate about mentoring the next generation of developers. As a Speaker and Coding Instructor with Code Your Future, I actively support individuals from diverse communities in their journey into tech through code reviews, career guidance, and peer programming sessions.
+            </p>
+          </p>
         </div>
       </div>
       <div className={styles['tech-stack']}> 
