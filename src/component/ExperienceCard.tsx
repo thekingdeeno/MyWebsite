@@ -41,9 +41,9 @@ const ExperienceCard = ({data}: Props)=>{
                                     <h2 className="role-heading">Roles</h2>
                                     <div className="role-points">
                                         <ul>
-                                            {data.points.map((point) => {
+                                            {data.points.map((point, index) => {
                                                 return(
-                                                    <li> -- {point}</li>
+                                                    <li key={index}> -- {point}</li>
                                                 );
                                             })}
                                         </ul>
