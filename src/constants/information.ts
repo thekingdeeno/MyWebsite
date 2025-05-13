@@ -5,10 +5,10 @@ export const workExperience = [
         logoImageUrl: "https://media.licdn.com/dms/image/v2/C4D0BAQHtdsIatNl3Lg/company-logo_200_200/company-logo_200_200/0/1630578374027/codeyourfuture_logo?e=1750291200&v=beta&t=ek17zQFYncRgRV2lkFzNSxGaXLwmCYRGEVB8wJthOlo",
         imageFileName: "codeyourfuture_cover.jpeg",
         role: "Software Dev Volunteer / Training Assistant",
-        description: "As a volunteer Coding Instructor, I support underrepresented individuals entering the tech industry through mentorship, code reviews, and peer programming sessions. I assist learners with coding challenges, career development advice, portfolio building, and job interview preparation, helping to foster a more diverse and inclusive tech community.",
+        description: "As a volunteer Coding Instructor, I support diverse individuals entering the tech industry through mentorship, code reviews, and peer programming sessions. I assist learners with coding challenges, career development advice, portfolio building, and job interview preparation, helping to foster a more diverse and inclusive tech community.",
         points: [
             'Conduct code reviews and lead peer programming sessions for junior developers.',
-            'Mentor learners from underrepresented backgrounds, providing guidance on coding challenges, portfolio building, and job interview preparation.',
+            'Mentor learners, providing guidance on coding challenges, portfolio building, and job interview preparation.',
             'Support career development initiatives, promoting diversity and inclusion within the tech community.'],
         projects: [
             
