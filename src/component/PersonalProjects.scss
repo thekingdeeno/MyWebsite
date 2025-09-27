@@ -29,10 +29,11 @@
         .description{
             padding: 40px 40px 20px 40px;
             .read-more{
-                color: #ba10139f;
+                color: #f7c6c69f;
+                width: max-content;
                 cursor: pointer;
                 &:hover{
-                    color: #ba1013f8;
+                    color: #e33033f8;
                 }
             }
         }

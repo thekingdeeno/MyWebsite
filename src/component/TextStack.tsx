@@ -13,6 +13,8 @@ import NextJSLogo from "../../public/images/Next.js Logo.webp"
 import ReactJSLogo from "../../public/images/ReactJsLogo.png"
 import TSLogo from "../../public/images/TypeScript logo.png"
 import MongoDBLogo from "../../public/images/MongoDB Logo.png"
+import PythonLogo from "../../public/images/Python_logo.png"
+import NodeJSLogo from "../../public/images/Nodejs_logo.png"
 import './TextStack.scss'
 
 export default function ScrollTriggered() {
@@ -96,8 +98,9 @@ const splash: React.CSSProperties = {
 const food: [string, number, number][] = [
     [JSLogo, 359, 359],
     [TSLogo, 359, 359],
-    // [NodeJSLogo, 359, 359],
+    [NodeJSLogo, 359, 359],
     [ExpressJSLogo, 359, 359],
+    [PythonLogo, 359, 359],
     [JavaLogo, 359, 359],
     [MysqlLogo, 359, 359],
     [MongoDBLogo, 359, 359],

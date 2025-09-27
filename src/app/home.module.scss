@@ -1,3 +1,4 @@
+body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } 
 .home-page{
     background-size: contain;
     background-repeat: no-repeat;
@@ -129,10 +130,11 @@
                 width: 80%;
                 height: 200px;
                 max-height: fit-content;
-                overflow: scroll;
+                overflow:scroll;
                 background-color: rgba(0, 0, 0, 0.709);
                 z-index: 1;
             }
+            .show::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } 
             .hide{
                 background-color: #8905054b;
                 width: 1%;
@@ -148,6 +150,7 @@
         }
     }
     .tech-stack{
+        ::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } 
         padding-bottom: 100px;
         .heading{
             text-align: center;

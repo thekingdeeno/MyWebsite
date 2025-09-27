@@ -2,7 +2,7 @@ export const workExperience = [
     {
         id: 1,
         name: "Code Your Future - Birmingham",
-        logoImageUrl: "https://media.licdn.com/dms/image/v2/C4D0BAQHtdsIatNl3Lg/company-logo_200_200/company-logo_200_200/0/1630578374027/codeyourfuture_logo?e=1750291200&v=beta&t=ek17zQFYncRgRV2lkFzNSxGaXLwmCYRGEVB8wJthOlo",
+        logoImageUrl: "codeyourfuture_icon.jpeg",
         imageFileName: "codeyourfuture_cover.jpeg",
         role: "Software Dev Volunteer / Training Assistant",
         description: "As a volunteer Coding Instructor, I support diverse individuals entering the tech industry through mentorship, code reviews, and peer programming sessions. I assist learners with coding challenges, career development advice, portfolio building, and job interview preparation, helping to foster a more diverse and inclusive tech community.",
@@ -17,13 +17,14 @@ export const workExperience = [
     {
         id: 2,
         name: "Piggyvest Global Limited",
-        logoImageUrl: "https://media.licdn.com/dms/image/v2/C4D0BAQGxM9phphZxfg/company-logo_200_200/company-logo_200_200/0/1630482013181/piggyvest_logo?e=1750291200&v=beta&t=CG1Su52hgDB6hDv3vYElaSinP9WY7r12Zpo3_eGkpo8",
+        logoImageUrl: "piggyvest_icon.jpeg",
         imageFileName: "pv_banner.jpeg",
         role: "Full-Stack Software Engineer",
         description: "As a Fullstack Software Engineer at PiggyTech, I worked on the development of microservices in TypeScript, optimising systems for high-volume API calls and improving error tracking processes by 25%. I built responsive web dashboards for transaction management and customer savings plans using React.js, Next.js, and Sass, contributing to a 15% boost in customer support efficiency. Collaborating closely with senior engineers, data scientists, and product designers, I enhanced system performance, refined UI/UX flows, and contributed to architectural planning through documentation and ERDs.",
         points: [
             'Developed TypeScript microservices for operational automation and high-volume API handling, improving error tracking efficiency by 25%',
             'Built dynamic React.js and Next.js dashboards for transaction management and customer savings plans, increasing customer support efficiency by 15%.',
+            'Added and integrated new pages and features to the Piggyvest Mobile app using React Native ',
             'Collaborated with senior software engineers, data scientists, and product designers to enhance system architecture and UI/UX flow',
             'Contributed to backend integration with legacy systems and created documentation including ERDs and system integrations',
         ],
@@ -34,7 +35,7 @@ export const workExperience = [
     {
         id: 3,
         name: "Live Capital",
-        logoImageUrl: "https://media.licdn.com/dms/image/v2/D4D0BAQHBTjxOnpFahg/company-logo_200_200/B4DZUUP8.LHIAI-/0/1739801481559/live_capital_hq_logo?e=1750291200&v=beta&t=MeNzrw-Y0_Ee9W5VCeupOgGinm_k-u9R470LhxxbS9I",
+        logoImageUrl: "livecapital_icon.jpeg",
         imageFileName: "LCBanner.jpeg",
         role: "Backend Engineer",
         description: "At Live Capital, I develop and maintain scalable backend services for mobile applications, translating product designs and technical requirement documents into efficient backend systems. I integrate third-party payment APIs to enable secure financial transactions within the app, while contributing to system architecture and cloud deployments using Node.js, MySQL, Restana, and Google Cloud Platform. Additionally, I collaborate with cross-functional teams and help onboard new engineers to enhance development speed and team productivity.",
@@ -50,7 +51,7 @@ export const workExperience = [
     {
         id: 4,
         name: "Ebidhaa Software Solutions",
-        logoImageUrl: "https://pbs.twimg.com/profile_images/1345682553286635521/XUvgS80__400x400.jpg",
+        logoImageUrl: "ebidhaa_icon.jpg",
         imageFileName: "Ebidhaa_logo.jpg",
         width: 400,
         height: 50,
@@ -125,7 +126,7 @@ export const personalProjects = [
     },
     {
         id: 7,
-        name: "Wando - v2 (Web App in NextJS)",
+        name: "Wando - v2 (Web App in VueJS)",
         description: "Wando v2 - This would be the web version of Wando v2 Built using VueJS. I haven't started working on this but I just felt like adding it to the list. I will use this project as an opportunity to learn master another web framework",
         tools: ['VueJS'],
         imageFileName: "WandoApp.png",

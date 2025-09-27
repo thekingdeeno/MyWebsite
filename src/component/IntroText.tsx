@@ -1,70 +1,40 @@
 "use client"
 
-import { animate, stagger } from "motion"
+import { animate, AnimationGeneratorType, stagger } from "motion"
 import { splitText } from "motion-plus"
 import { useEffect, useRef } from "react"
 
-export function SplitName() {
-    const containerRef = useRef<HTMLDivElement>(null)
+interface animateProps {
+    text: string,
+    fontSize: number,
+    type?: AnimationGeneratorType,
+    delay?: number,
+    duration?: number,
+    bounce?: number
 
-    useEffect(() => {
-        document.fonts.ready.then(() => {
-            if (!containerRef.current) return
-
-            // Hide the container until the fonts are loaded
-            containerRef.current.style.visibility = "visible"
-
-            const { words } = splitText(
-                containerRef.current.querySelector("h1")! 
-            )
-
-            // Animate the words in the h1
-            animate(
-                words,
-                { opacity: [0, 1], y: [10, 0] },
-                {
-                    type: "spring",
-                    duration: 2,
-                    bounce: 0,
-                    delay: stagger(0.15),
-                }
-            )
-        })
-    }, [])
-
-    return (
-        <div className="container" ref={containerRef}>
-            <h1 className="h1">
-               {"Hey, I'm Deeno"}
-            </h1>
-            <Stylesheet />
-        </div>
-    )
 }
 
-export function SplitRole() {
+export function AnimateText({ text, fontSize, type = 'spring', delay = 0.15, duration = 2, bounce = 0 } : animateProps){
     const containerRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
         document.fonts.ready.then(() => {
             if (!containerRef.current) return
 
-            // Hide the container until the fonts are loaded
             containerRef.current.style.visibility = "visible"
 
             const { words } = splitText(
-                containerRef.current.querySelector("h2")! 
+                containerRef.current.querySelector("p")! 
             )
 
-            // Animate the words in the h1
             animate(
                 words,
                 { opacity: [0, 1], y: [10, 0] },
                 {
-                    type: "spring",
-                    duration: 4,
-                    bounce: 0,
-                    delay: stagger(0.35),
+                    type,
+                    duration,
+                    bounce,
+                    delay: stagger(delay),
                 }
             )
         })
@@ -72,9 +42,9 @@ export function SplitRole() {
 
     return (
         <div className="container" ref={containerRef}>
-            <h2 className="h2">
-                A Junior Full-Stack Software Devloper
-            </h2>
+            <p style={{fontSize: `${fontSize}px`}}>
+               {text}
+            </p>
             <Stylesheet />
         </div>
     )

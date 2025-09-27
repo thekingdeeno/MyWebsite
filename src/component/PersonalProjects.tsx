@@ -80,7 +80,7 @@ const PersonalProjects = ()=>{
             </div>
         }
             <div className="projects">
-                <div className="project" key={proj.id} onClick={()=>setReadMoreModal(proj.id)}>
+                <div className="project" key={proj.id} /*onClick={()=>setReadMoreModal(proj.id)}*/>
                     <div className="project-image">
                         <Image src={`/images/${proj.imageFileName}`} alt={""} width={200} height={100}/>
 

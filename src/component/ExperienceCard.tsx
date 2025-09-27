@@ -32,7 +32,7 @@ const ExperienceCard = ({data}: Props)=>{
                             <div className="experience-detail-body">
                                 <div className="data-container">
                                     <div className="container-heading">
-                                        <img src={data.logoImageUrl} alt="logo-img" />
+                                    <Image src={(`/images/${data.logoImageUrl}`)} alt="logo image" width={200} height={200} />
                                     </div>
                                     <h2>{data.name}</h2>
                                     <p>{workExperience[activeModalId - 1].description}</p>
@@ -43,7 +43,10 @@ const ExperienceCard = ({data}: Props)=>{
                                         <ul>
                                             {data.points.map((point, index) => {
                                                 return(
+                                                    <>
                                                     <li key={index}> -- {point}</li>
+                                                    <br />
+                                                    </>
                                                 );
                                             })}
                                         </ul>
@@ -60,13 +63,12 @@ const ExperienceCard = ({data}: Props)=>{
                     <Image src={(`/images/${data.imageFileName}`)} alt={""} width={200} height={200}/>
                 </div>
                 <div className="logo-image">
-                    <img src={data.logoImageUrl} alt="logo image" />
+                    <Image src={(`/images/${data.logoImageUrl}`)} alt="logo image" width={200} height={200} />
                 </div>
             </div>
             <div className="text-container">
                 <h4>{data.name}</h4>
                 <h3>{data.role}</h3>
-                {/* <p>{data.description}</p> */}
             </div>
         </div>
         </>
