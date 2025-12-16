@@ -43,17 +43,22 @@ export default function Home() {
   //   }
   // }
 
-  const [isVisible, setIsVisible] = useState<boolean>(false)
+  const [isVisible, setIsVisible] = useState<any>({})
   const observerRef = useRef(null);
+  const experienceCardRef = useRef(null)
 
   useEffect(()=>{
     const observer = new IntersectionObserver( (entries: any) => {
       const entry = entries[0]
-      console.log(entry.isIntersecting, 'entry');
-      if (entry.isIntersecting) {
+      // console.log(entry, 'entry');
+      console.log(isVisible, entry.target.id);
+      if (entry.isIntersecting && (entry.target.id === 'about-me')) {
         setShowAboutText(!showAboutText)
+        setIsVisible({...isVisible, aboutMe: entry.isIntersecting})
       }
-      setIsVisible(entry.isIntersecting)
+      if (entry.isIntersecting && (entry.target.id === 'experience-cards')) {
+        setIsVisible({...isVisible, experienceCards: entry.isIntersecting})
+      }
     }, {
       root: null,
       rootMargin: '0px',
@@ -61,6 +66,8 @@ export default function Home() {
     });
 
     if (observerRef.current) observer.observe(observerRef.current);
+    if (experienceCardRef.current) observer.observe(experienceCardRef.current);
+    
   }, [])
   
   
@@ -99,7 +106,7 @@ export default function Home() {
       <div className={styles['floating-icons']}>
         <FloatingIcons />
       </div>
-      <div className={styles['about-me']} ref={observerRef}>
+      <div className={styles['about-me']} id='about-me' ref={observerRef}>
         <div className={`${styles['image-container']}`}>
           <Image src={DeenoLogo} alt='' className={`${styles['no-text']} ${styles[showAboutText?'text':'']}`} />
         </div>
@@ -134,8 +141,8 @@ export default function Home() {
         <div className={styles['heading']}>
           <h1>Professional Experience</h1>
         </div>
-        
-        <div className={styles['experience-cards']}>
+
+        <div className={styles[`experience-cards`]} id='experience-cards' ref={experienceCardRef}>
           {workExperience.map((data: WorkExperienceType)=>{
             return (
               <div key={data.id} className={styles['experience-card-container']}>

@@ -5,8 +5,6 @@ import SideSheet from "./SideSheet";
 import Image from "next/image";
 import { WorkExperienceType } from "@/types";
 
-
-
 type Props = {
     data: WorkExperienceType
 }
@@ -21,7 +19,6 @@ const ExperienceCard = ({data}: Props)=>{
     //     }
     //     return
     // }
-    
 
     return(
         <>
@@ -44,7 +41,7 @@ const ExperienceCard = ({data}: Props)=>{
                                             {data.points.map((point, index) => {
                                                 return(
                                                     <>
-                                                    <li key={index}> -- {point}</li>
+                                                    <li> -- {point}</li>
                                                     <br />
                                                     </>
                                                 );

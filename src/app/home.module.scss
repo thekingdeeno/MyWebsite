@@ -206,10 +206,18 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; }
         height: 100%;
         margin: 100px 0px;
         display: flex;
+        @media screen and (max-width: 1300px) {
+            display: block;
+            // padding: 30px;
+        }
         justify-content: center;
         padding: 50px 0px;
         .left-section{
             width: 40%;
+        @media screen and (max-width: 1300px) {
+            width: 100%;
+            padding: 100px;
+        }
             padding: 0px 50px;
             .big-text{
                 h1{
@@ -224,6 +232,10 @@ body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; }
         .right-section{
             width: 50%;
             display: flex;
+            @media screen and (max-width: 1300px) {
+                width: 100%;
+                padding: 100px;
+            }
         }
         @media screen and (max-width: 1024px) {
             display: block;
