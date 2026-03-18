@@ -1,4 +1,6 @@
-body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } 
+:global{
+    body::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; }
+}
 .home-page{
     background-size: contain;
     background-repeat: no-repeat;
