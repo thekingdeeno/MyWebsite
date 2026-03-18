@@ -36,3 +36,12 @@ body::-webkit-scrollbar-button {
     display: none;
   }
 } */
+/* index.css */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
