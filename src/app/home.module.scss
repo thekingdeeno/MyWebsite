@@ -1,9 +1,11 @@
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
 
-// /* wrap each full selector in :global(...) */
-// :global(body::-webkit-scrollbar),
-// :global(body::-webkit-scrollbar-button) {
-//     display: none;
-// }
+*::-webkit-scrollbar {
+  display: none;
+}
 
 .home-page{
     background-size: contain;
