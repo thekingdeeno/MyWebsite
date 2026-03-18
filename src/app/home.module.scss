@@ -1,6 +1,10 @@
-:global(body::-webkit-scrollbar), :global(body::-webkit-scrollbar-button) {
-  display: none;
+:global {
+  body::-webkit-scrollbar,
+  body::-webkit-scrollbar-button {
+    display: none;
+  }
 }
+
 .home-page{
     background-size: contain;
     background-repeat: no-repeat;
@@ -135,6 +139,10 @@
                 overflow:scroll;
                 background-color: rgba(0, 0, 0, 0.709);
                 z-index: 1;
+                /* only the local class needs the scrollbar rule; no global selector is required here */
+                &::-webkit-scrollbar {
+                  display: none;
+                }
             }
             .show::-webkit-scrollbar, body::-webkit-scrollbar-button { display: none; } 
             .hide{
@@ -170,6 +178,10 @@
             font-size: 30px;
             width: max-content;
             border-bottom: 1px solid #890506 ;
+        }
+        /* if you want the scrollbar hidden only for this element, keep it local */
+        &::-webkit-scrollbar {
+          display: none;
         }
     }
     .professional-experience{
