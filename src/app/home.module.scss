@@ -1,8 +1,8 @@
-:global {
-  body::-webkit-scrollbar,
-  body::-webkit-scrollbar-button {
+
+/* wrap each full selector in :global(...) */
+:global(body::-webkit-scrollbar),
+:global(body::-webkit-scrollbar-button) {
     display: none;
-  }
 }
 
 .home-page{
