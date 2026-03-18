@@ -25,3 +25,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #000000;
 }
+/* 
+body::-webkit-scrollbar,
+body::-webkit-scrollbar-button {
+  display: none;
+}
+
+.show {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+} */
