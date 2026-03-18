@@ -38,7 +38,7 @@ export function AnimateText({ text, fontSize, type = 'spring', delay = 0.15, dur
                 }
             )
         })
-    }, [])
+    },[])
 
     return (
         <div className="container" ref={containerRef}>

@@ -43,12 +43,12 @@ export default function Home() {
   //   }
   // }
 
-  const [isVisible, setIsVisible] = useState<any>({})
+  const [isVisible, setIsVisible] = useState({})
   const observerRef = useRef(null);
   const experienceCardRef = useRef(null)
 
   useEffect(()=>{
-    const observer = new IntersectionObserver( (entries: any) => {
+    const observer = new IntersectionObserver( (entries) => {
       const entry = entries[0]
       // console.log(entry, 'entry');
       console.log(isVisible, entry.target.id);
@@ -114,7 +114,7 @@ export default function Home() {
           <h3 onClick={()=>setShowAboutText(!showAboutText)}>About Me</h3>
           <div className={`${styles['show']} ${styles[showAboutText?'':'hide']}`}>
             <p>
-              Hey I’m Nwando Ifezue, some people know me as Deeno. I'm a versatile Software Engineer with a strong foundation in backend, website and mobile development. I specialise in building scalable, high-performance applications and cloud-based services. With hands-on experience using tools like Node.js, TypeScript, React, Next.js, and Google Cloud Platform, I thrive on creating seamless user experiences and efficient, robust systems.
+              Hey I&aposm Nwando Ifezue, some people know me as Deeno. I&aposm a versatile Software Engineer with a strong foundation in backend, website and mobile development. I specialise in building scalable, high-performance applications and cloud-based services. With hands-on experience using tools like Node.js, TypeScript, React, Next.js, and Google Cloud Platform, I thrive on creating seamless user experiences and efficient, robust systems.
             </p>
             <br />
             <p>
@@ -122,11 +122,11 @@ export default function Home() {
             </p>
             <br />
             <p>
-              Beyond technical work, I’m passionate about mentoring the next generation of developers. As a Speaker and Coding Instructor with Code Your Future Birmingham, I actively support individuals from diverse communities and professional backgrounds in their journey into tech through code reviews, career guidance, and peer programming sessions.
+              Beyond technical work, I&aposm passionate about mentoring the next generation of developers. As a Speaker and Coding Instructor with Code Your Future Birmingham, I actively support individuals from diverse communities and professional backgrounds in their journey into tech through code reviews, career guidance, and peer programming sessions.
             </p>
             <br />
             <p>
-              I am currently obtaining a bachelors degree in Computer Science at Birmingham City Univeristy. Some of the courses I'm taking involve building projects with different programming languages like Java and Python. My module at the university also involves some design courses as well where I learn how to use programs like Figma, Adobe Photoshop and other design tools. Alongside learning about building and using software systems, I'm also learning about building computer components and boards. I've learned so much and met many people since moving to the UK, I can't wait to build new thing with all I've learnt 🚀
+              I am currently obtaining a bachelors degree in Computer Science at Birmingham City Univeristy. Some of the courses I&aposm taking involve building projects with different programming languages like Java and Python. My module at the university also involves some design courses as well where I learn how to use programs like Figma, Adobe Photoshop and other design tools. Alongside learning about building and using software systems, I&aposm also learning about building computer components and boards. I&aposve learned so much and met many people since moving to the UK, I can&apost wait to build new thing with all I&aposve learnt 🚀
             </p>
           </div>
         </div>
