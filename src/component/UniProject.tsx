@@ -6,20 +6,20 @@ import { GoDotFill } from "react-icons/go";
 import { GoDot } from "react-icons/go";
 import { GrCaretPrevious } from "react-icons/gr";
 import { GrCaretNext } from "react-icons/gr";
-import { personalProjects } from "@/constants/information";
+import { universityProjects } from "@/constants/information";
 import Image from "next/image";
-import "./PersonalProjects.scss"
+import "./UniProject.scss"
 import "../../public/images/LCBanner.jpeg"
 import Link from "next/link";
-import { PersonalProjectType } from "@/types";
+import { UniversityProjectType } from "@/types";
 
 
-const PersonalProjects = ()=>{
+const UniProject = ()=>{
 
     const [activeProjectId, setActiveProjectId] = useState<number>(1);
     const [readMoreModal, setReadMoreModal] = useState<number|null>(null);
 
-    const proj = personalProjects[activeProjectId -1 ];
+    const proj = universityProjects[activeProjectId -1 ];
 
     // setInterval(()=>{
         // nextProject()
@@ -33,20 +33,24 @@ const PersonalProjects = ()=>{
     
     function prevProject(){
         if (activeProjectId -1 < 1) {
-            setActiveProjectId(personalProjects.length);
+            setActiveProjectId(universityProjects.length);
             return
         };
         setActiveProjectId(activeProjectId - 1);
     };
 
     function nextProject(){
-        if (activeProjectId +1 > personalProjects.length) {
+        if (activeProjectId +1 > universityProjects.length) {
             setActiveProjectId(1);
             return
         };
         setActiveProjectId(activeProjectId + 1);
     };
     
+
+
+        
+
     return(
         <>
         {readMoreModal !== null &&
@@ -77,13 +81,14 @@ const PersonalProjects = ()=>{
                 </div>
             </div>
         }
-            <div className="personal-projects">
+            <div className="university-projects">
                 <div className="project" key={proj.id}>
-                    <div className="project-image">
+                    <div className="project-image" style={{backgroundColor: proj.bgColor}}>
                         <Image src={`/images/${proj.imageFileName}`} alt={""} width={200} height={100}/>
 
                     </div>
                     <div className="description">
+                        <h1 className="course-name">{proj.course}</h1>
                         <h2 className="project-name">{proj.name}</h2>
                         <div className="tools">{
                             proj.tools.map((tool: string)=>{
@@ -103,6 +108,7 @@ const PersonalProjects = ()=>{
                         
                         <button className="repo-link-btn">Code <FaCode className="btn-ico" /></button>
                         </Link>
+
                         {proj.link === 'suspended' &&
                         <button className="inactive-link-btn">Suspended<MdSignalWifiConnectedNoInternet0 className="btn-ico" /></button>
                         }
@@ -120,7 +126,7 @@ const PersonalProjects = ()=>{
                             <GrCaretPrevious />
                         </span>
 
-                        {personalProjects.map((val: PersonalProjectType)=>{
+                        {universityProjects.map((val: UniversityProjectType)=>{
                             return(
                                 <span key={val.id} onClick={()=>setActiveProjectId(val.id)}>
                                     {(val.id === activeProjectId) ?
@@ -145,4 +151,4 @@ const PersonalProjects = ()=>{
 
 }
 
-export default PersonalProjects;
+export default UniProject;

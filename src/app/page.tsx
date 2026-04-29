@@ -11,6 +11,7 @@ import { FloatingIcons } from '@/component/FloatingIcons';
 import {AnimateText} from '@/component/IntroText';
 import PersonalProjects from '@/component/PersonalProjects';
 import { WorkExperienceType } from '@/types';
+import UniProject from '@/component/UniProject';
 
 // type navType =  'intro'|'about'|'education'|'stack'|'experience'|'projects'| 'more';
 
@@ -118,7 +119,7 @@ export default function Home() {
             </p>
             <br />
             <p>
-              {"Some time back, I was a part-time member of the engineering team at Live Capital, where I develop and maintain backend services for mobile applications, integrating third-party APIs and contributing to system architecture. Previously, I played a key role as a Fullstack Software Engineer at PiggyTech Global, developing microservices, building intuitive web dashboards, and enhancing system performance and UI/UX flow quality. I was tasked a couple of times to build new features on the Piggyvest Mobile app where I worked on services and implementations on the backend as well as building and integrating new pages on the mobile app."}
+              {"I was a part-time member of the engineering team at Live Capital, where I develop and maintain backend services for mobile applications, integrating third-party APIs and contributing to system architecture. Previously, I played a key role as a Fullstack Software Engineer at PiggyTech Global, developing microservices, building intuitive web dashboards, and enhancing system performance and UI/UX flow quality. I was tasked a couple of times to build new features on the Piggyvest Mobile app where I worked on services and implementations on the backend, as well as building and integrating new pages on the mobile app."}
             </p>
             <br />
             <p>
@@ -152,21 +153,41 @@ export default function Home() {
           })}
         </div>
       </div>
+
       <div className={styles['personal-projects']}>
         <div className={styles['left-section']}>
           <div className={styles['big-text']}>
             <h1>PERSONAL</h1>
-            <h1>PrOjeCTs!</h1>
+            <h1>PrOjeCTs! 🚀</h1>
           </div>
           <div className={styles['small-text']}>
             <p>
-              {"Over the last few years I have woked on many mini projects. I'm the kind of developer that enjoys hands on learning. Rather than watching tutorials, sometimes i just decide to work on a project that would require me to use the tool or tech stack I'm trying to learn. Since starting my coding career professionaly and getting into the university, I have barely had anytime to work on new projects to show some new tricks and skills I have obtained. This is mostly due to the amount of university course works and tasks I usually have on my plate. Over time I have learnt more about time management and I usually try to set out time to work on new, bigger and more complex projects. Currently, the project I'm focusing on is the Wando Comm (version 2.0)"}
+              {"Over the last few years I have worked on many mini projects. I'm the kind of developer that enjoys hands on learning. Rather than watching tutorials everytime, sometimes I just decide to work on a project that would require me to use the tool or tech stack I'm trying to learn. Since starting my coding career professionaly and getting into the university, I have barely had anytime to work on new projects to show some new tricks and skills I have obtained. This is mostly due to the amount of university course works and tasks I usually have on my plate. Over time I have learnt more about time management and I usually try to set out time to work on new, bigger and more complex projects. Currently, I'm working on a new app called Wando. I'll be adding more features to it as I learn more about the tech stack and as I have free time."}
             </p>
           </div>
         </div>
         <div className={styles['right-section']}>
           <div className={styles['projects-container']}>
             <PersonalProjects />
+          </div>
+        </div>
+      </div>
+
+      <div className={styles['university-projects']}>
+        <div className={styles['left-section']}>
+          <div className={styles['big-text']}>
+            <h1>UNIVERSITY</h1>
+            <h1>pRoJEctS! 📚</h1>
+          </div>
+          <div className={styles['small-text']}>
+            <p>
+              {"Since starting my university journey in September 2024 at Birmingham City University, I have learnt a lot of things and in recent months learnt to build new projects with new languages i have never used before. Since 2025 I have learnt 3 new OOP languages (Java, Python and C++). Since starting university programming has been less boring. One thing about me is that I'm not a fan of repititive things. Ive been using just Javascript and Typescript since i started my career but now I get to take on new challenges with thenew programming languages I use at the school."}
+            </p>
+          </div>
+        </div>
+        <div className={styles['right-section']}>
+          <div className={styles['projects-container']}>
+            <UniProject />
           </div>
         </div>
       </div>

@@ -17,3 +17,14 @@ export type WorkExperienceType = {
         repoUrl: string,
         link: string | null
     }
+
+    export type UniversityProjectType = {
+        id: number,
+        name: string,
+        course: string,
+        description: string,
+        tools: string[],
+        imageFileName: string,
+        repoUrl: string,
+        link: string | null
+    }

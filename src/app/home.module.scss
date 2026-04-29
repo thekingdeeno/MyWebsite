@@ -1,6 +1,7 @@
 .home-page{
     background-size: contain;
     background-repeat: no-repeat;
+    margin-bottom: 100px;
     .fullscreen-overlay{
         background-image: linear-gradient(#000000,#000000b4,#000000);
         width: 100%;
@@ -200,9 +201,13 @@
             overflow: scroll;
             @media screen and (max-width: 700px) {
                 display: block;
+                align-items: center;
             }
             .experience-card-container{
                 // width: 20%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 padding: 10px 0px;
             }
         }
@@ -211,24 +216,25 @@
     .personal-projects{
         position: relative;
         height: 100%;
-        margin: 100px 0px;
+        margin: 100px 0px 150px 0px;
         display: flex;
-        @media screen and (max-width: 1300px) {
+        @media screen and (max-width: 1350px) {
             display: block;
-            // padding: 30px;
+            width: 100%;
         }
+
         justify-content: center;
         padding: 50px 0px;
         .left-section{
             width: 40%;
         @media screen and (max-width: 1300px) {
             width: 100%;
-            padding: 100px;
+            // padding: 100px;
         }
             padding: 0px 50px;
             .big-text{
                 h1{
-                    font-size: 100px;
+                    font-size: 90px;
                     font-weight: 900;
                     &:last-child{
                         color: #890506;
@@ -241,7 +247,7 @@
             display: flex;
             @media screen and (max-width: 1300px) {
                 width: 100%;
-                padding: 100px;
+                padding: 20px;
             }
         }
         @media screen and (max-width: 1024px) {
@@ -258,6 +264,65 @@
             .right-section{
                 width: 100%;
                 // display: flex;
+            };
+        };
+    };
+
+    .university-projects{
+        position: relative;
+        height: 100%;
+        margin: auto;
+        @media screen and (max-width: 1300px) {
+            display: block;
+        }
+        justify-content: center;
+        .left-section{
+            width: 40%;
+            margin: auto;
+        @media screen and (max-width: 1300px) {
+            width: 100%;
+            padding: 100px;
+        }
+            padding: 0px 50px;
+            .big-text{
+                h1{
+                    font-size: 80px;
+                    font-weight: 900;
+                    &:last-child{
+                        color: #1647a8;
+                    }
+                }
+            }
+            .small-text{
+                border-radius: 10px;
+            }
+        }
+        .right-section{
+            width: 50%;
+            display: flex;
+            margin: auto;
+
+
+            @media screen and (max-width: 1300px) {
+                width: 100%;
+                padding: 20px;
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            display: block;
+            .left-section{
+                width: 100%;
+                margin-bottom: 100px;
+                padding: 0px 50px;
+
+                .big-text{
+                    h1{
+                        font-size: 50px;
+                    };
+                };
+            };
+            .right-section{
+                width: 100%;
             };
         };
     };
