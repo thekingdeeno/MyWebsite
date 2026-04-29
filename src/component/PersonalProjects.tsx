@@ -51,7 +51,7 @@ const PersonalProjects = ()=>{
         <>
         {readMoreModal !== null &&
             <div className="read-more-modal" onClick={(e)=>closeModal(e)}>
-                <div className="content-body">
+                <div className="personal-content-body">
                     <h1 className="header">{proj.name}</h1>
                     <div className="description">
                         <p>
